@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | PanikSmp Store</title>
+    <style>
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://www.minecraft.net/content/dam/minecraft/realms/realms-plus-header.jpg');
+            background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; margin: 0; font-family: 'Segoe UI', sans-serif;
+        }
+        .login-box { 
+            background: rgba(0,0,0,0.9); padding: 40px; border-radius: 25px; 
+            border: 2px solid #8A2BE2; text-align: center; width: 90%; max-width: 350px; 
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+        }
+        input { width: 85%; padding: 15px; margin-bottom: 25px; border-radius: 12px; border: 1px solid #00d2ff; background: #1a1a1a; color: white; text-align: center; font-size: 16px; }
+        .btn-login { width: 100%; padding: 15px; background: linear-gradient(90deg, #8A2BE2, #00d2ff); color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn-login:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2 style="color:#00d2ff; margin-bottom: 20px;">PANIK SMP S3</h2>
+        <p style="color:#ccc; font-size: 14px; margin-bottom: 20px;">Masukan Nick Minecraft kamu untuk melanjutkan ke store.</p>
+        <input type="text" id="nick" placeholder="Contoh: Steve" required>
+        <button class="btn-login" onclick="goToStore()">LOGIN KE STORE</button>
+    </div>
+
+    <script>
+        function goToStore() {
+            var nick = document.getElementById("nick").value;
+            if(nick == "") { alert("Harap masukkan nickname!"); } 
+            else { localStorage.setItem("userNick", nick); window.location.href = "store.html"; }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>PanikSmp Store | S3</title>
+    <style>
+        :root { --p: #4b0082; --b: #00d2ff; --g: #00ff00; }
+        body { 
+            background: linear-gradient(135deg, var(--p), var(--b));
+            background-attachment: fixed; color: #fff; font-family: 'Segoe UI', sans-serif;
+            display: flex; justify-content: center; padding: 20px; margin: 0; min-height: 100vh;
+        }
+        .container { width: 100%; max-width: 450px; text-align: center; }
+        
+        .status-box { font-size: 18px; font-weight: bold; margin-bottom: 10px; color: var(--g); }
+        .title { font-size: 28px; font-weight: 900; margin: 0; }
+        .subtitle { font-size: 18px; color: var(--b); font-weight: bold; margin-bottom: 20px; }
+
+        .ip-box { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--b); }
+
+        .btn { 
+            display: block; width: 100%; height: 50px; margin: 10px 0;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            color: #fff; text-align: center; line-height: 50px; text-decoration: none;
+            border-radius: 12px; font-weight: bold; backdrop-filter: blur(5px);
+        }
+        .btn:hover { background: var(--b); color: #000; }
+
+        .section { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 12px; margin-top: 20px; text-align: left; font-size: 13px; }
+        .section h3 { color: var(--b); text-align: center; margin-top: 0; }
+        .rules-list { padding-left: 20px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="status-box">SERVER | ONLINE 🟢</div>
+    <h1 class="title">STORE PANIK SMP 🛒</h1>
+    <div class="subtitle">S3</div>
+
+    <div class="ip-box">
+        IP: <b>play.paniksmp.my.id</b><br>
+        PORT: <b>19237</b>
+    </div>
+
+    <!-- Tombol Navigasi Lengkap -->
+    <a href="#rank" class="btn">📋 LIST RANK ✨</a>
+    <a href="#rules" class="btn">‼️ LIST RULES ‼️</a>
+    <a href="#fitur" class="btn">✨ LIST FITUR SERVER ✨</a>
+    <a href="https://api.whatsapp.com/send?phone=6283846509300" class="btn">🛒 BELI RANK</a>
+    <a href="https://tiktok.com/@panik.smp" class="btn">⭐ TIKTOK RESMI</a>
+    <a href="https://chat.whatsapp.com/CBRKjJlFOC61aBWxRHyY8i" class="btn">💬 JOIN GRUP WHATSAPP</a>
+
+    <div class="section" id="rank">
+        <h3>📋 LIST RANK</h3>
+        <p style="text-align:center;">VIP (20K) • MVP (40K) • ELITE (50K)<br>LEGEND (70K) • SULTAN (100K) • SUPREME (200K)</p>
+    </div>
+
+    <div class="section" id="fitur">
+        <h3>✨ FITUR SERVER</h3>
+        • Shop & Sell • Java + Bedrock • Land Claim • bRTP (/rtp)<br>
+        • Sethome & Warp • Auction House • Coin Flip • Cosmetics<br>
+        • Gacha System • AFK Reward • Mining Sim • Clan System<br>
+        • Anti Cheat & Anti Grief • Event & Giveaway • Active Staff
+    </div>
+
+    <div class="section" id="rules">
+        <h3>‼️ 17 PERATURAN KETAT</h3>
+        <ol class="rules-list">
+            <li>Dilarang toxic atau rasis.</li>
+            <li>Dilarang menggunakan cheat/hack.</li>
+            <li>Dilarang melakukan scamming.</li>
+            <li>Dilarang melakukan griefing.</li>
+            <li>Dilarang spam di chat publik.</li>
+            <li>Dilarang promosi server lain.</li>
+            <li>Dilarang menyalahgunakan bug.</li>
+            <li>Dilarang menghina staf server.</li>
+            <li>Dilarang melakukan duplikasi item.</li>
+            <li>Dilarang menipu harga pasar.</li>
+            <li>Dilarang memakai skin tidak sopan.</li>
+            <li>Dilarang mencuri di area claim.</li>
+            <li>Dilarang flood atau caps lock.</li>
+            <li>Dilarang memancing keributan.</li>
+            <li>Dilarang membagikan data pribadi.</li>
+            <li>Keputusan staf adalah mutlak.</li>
+            <li>Wajib mematuhi semua aturan.</li>
+        </ol>
+    </div>
+
+    <div style="margin: 20px 0; font-weight: bold;">
+        Support: Java & Crack & MCPE<br>
+        Version: 1.20+
+    </div>
+
+    <div id="displayName" style="font-weight:bold; margin-top:20px; color:var(--b);"></div>
+</div>
+
+<script>
+    var user = localStorage.getItem("userNick");
+    document.getElementById("displayName").innerHTML = "Selamat ✨ Datang " + user;
+</script>
+</body>
+</html>
